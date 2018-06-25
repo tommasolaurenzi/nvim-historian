@@ -54,6 +54,7 @@ function! s:paste(list, index)
 endfunction
 
 function! historian#display_registers(...) abort
+  call historian#add_registers()
   if (a:0 == 1)
     if !(s:check_exists(g:historian_dictionary, a:1))
       return 0
